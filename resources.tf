@@ -22,17 +22,28 @@ module "minio" {
   depends_on = [module.kong]
 }
 
-module "argo-events" {
-  source = "./modules/argo-events"
+module "loki" {
+  source = "./modules/loki"
   depends_on = [module.minio]
 }
 
-module "postgres" {
-  source = "./modules/postgres"
-  depends_on = [module.argo-events]
+module "promtail" {
+  source = "./modules/promtail"
+  depends_on = [module.loki]
 }
 
-module "debezium" {
-  source = "./modules/debezium"
-  depends_on = [module.postgres]
+module "prometheus" {
+  source = "./modules/prometheus"
+  depends_on = [module.promtail]
 }
+
+module "grafana" {
+  source = "./modules/grafana"
+  depends_on = [module.prometheus]
+}
+
+module "ingress" {
+  source = "./modules/ingress"
+  depends_on = [module.grafana]
+}
+
