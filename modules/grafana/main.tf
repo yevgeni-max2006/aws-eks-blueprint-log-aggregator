@@ -16,5 +16,4 @@ resource "helm_release" "grafana" {
   values = [
     file("${path.module}/grafana-values.yaml")
   ]
-
 }
