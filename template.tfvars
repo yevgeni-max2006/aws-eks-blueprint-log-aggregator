@@ -1,6 +1,6 @@
 
 ###  ---  Default Template  ---  ###
-aws_region      = "us-west-2" # \\\ eu-central-1
+aws_region      = "eu-central-1" # \\\ eu-central-1
 cluster_name    = "eks-cluster-log-aggregator"
 cluster_version = "1.35"
 instance_types  = ["t3.medium"]
