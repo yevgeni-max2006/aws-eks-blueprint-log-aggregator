@@ -1,4 +1,5 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ab8ee437-8b98-4827-8f0d-39cd337ada87" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/204dc64d-d6e0-4c7e-8b73-6a95de372ca2" />
+
 
 
 ## AWS | EKS Log-Aggregator
